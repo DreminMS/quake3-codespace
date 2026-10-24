@@ -1,0 +1,16 @@
+{
+  "name": "Quake 3 Arena Server",
+  "postStartCommand": "docker compose up -d",
+  "forwardPorts": [8080, 27960],
+  "portsAttributes": {
+    "8080": {
+      "label": "Quake 3 Web Client",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    },
+    "27960": {
+      "label": "Quake 3 WS Game Traffic",
+      "visibility": "public"
+    }
+  }
+}
